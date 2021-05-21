@@ -1,0 +1,12 @@
+{
+  "name": "animationPrac",
+  "displayName": "animationPrac",
+  "expo": {
+    "name": "animationPrac",
+    "slug": "animationPrac",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

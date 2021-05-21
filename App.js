@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import {getOrder} from './config';
 import {useSharedValue} from 'react-native-reanimated';
 
 import AnimatedBox from './AnimatedBox';
@@ -13,22 +12,25 @@ export default function App() {
   const positions = useSharedValue(Object.assign({}, ...imageIdx));
   return (
     <View style={styles.container}>
-      {images.map((item) => {
-        return (
-          <AnimatedBox
-            item={item}
-            positions={positions}
-          />
-        );
-      })}
+      <View style={{margin: 50, backgroundColor: 'pink', flex: 1}}>
+        {images.map((item) => {
+          return (
+            <AnimatedBox
+              key={item}
+              item={item}
+              positions={positions}
+            />
+          );
+        })}
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
     flex: 1,
   },
 });
